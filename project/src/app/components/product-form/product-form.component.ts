@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-product-form',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './product-form.component.html',
   styleUrl: './product-form.component.scss'
 })
