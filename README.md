@@ -16,4 +16,6 @@ ng generate component components/product-list
 ng generate component components/product-form
 ng generate service services/product
 ng generate class models/product
+
+ng serve
 ```
