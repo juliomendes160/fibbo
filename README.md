@@ -11,4 +11,9 @@ ng --version 18.1.1
 ng new project
 
 cd project
+
+ng generate component components/product-list
+ng generate component components/product-form
+ng generate service services/product
+ng generate class models/product
 ```
