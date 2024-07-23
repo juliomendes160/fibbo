@@ -1,19 +1,27 @@
-<h2>Product List</h2>
-<table>
+<h2>Lista de produtos</h2>
+<table *ngIf="products.length > 0">
+  <thead>
   <tr>
     <th>ID</th>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Price</th>
-    <th>Actions</th>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th>Preço</th>
+    <th>Ações</th>
   </tr>
+  </thead>
+  <tbody>
   <tr *ngFor="let product of products">
     <td>{{product.id}}</td>
     <td>{{product.name}}</td>
     <td>{{product.description}}</td>
-    <td>{{product.price}}</td>
+      <td>\${{ product.price.toFixed(2) }}</td>
     <td>
-      <button (click)="deleteProduct(product.id)">Delete</button>
+      <button (click)="deleteProduct(product.id)">Deletar</button>
     </td>
   </tr>
+  </tbody>
 </table>
+
+<p *ngIf="products.length === 0" class="no-products-message">
+  Adicione um produto.
+</p>
