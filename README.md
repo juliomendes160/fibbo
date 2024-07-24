@@ -1,5 +1,9 @@
 # fibbo
 
+# front-end
+
+## angular
+
 ```bash
 node -v 20.10.0
 
@@ -19,3 +23,5 @@ ng generate class models/product
 
 ng serve
 ```
+
+# back-end
