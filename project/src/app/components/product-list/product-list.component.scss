@@ -1,0 +1,72 @@
+h2 {
+  color: #3498db;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+thead {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr {
+  transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+td {
+  background-color: #f7f7f7;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e74c3c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #c0392b;
+  }
+}
+
+.no-products-message {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+  padding: 20px;
+}

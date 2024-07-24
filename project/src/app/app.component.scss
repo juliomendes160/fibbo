@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  nav {
+    margin-top: 10px;
+    background-color: #66ccff;  /* Azul claro para o fundo do menu */
+    padding: 10px 0;
+    border-radius: 4px;
+
+    a {
+      color: #003366;  /* Azul escuro para o texto dos links */
+      text-decoration: none;  /* Remove o sublinhado */
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s, transform 0.3s, background-color 0.3s;
+      cursor: pointer;  /* Adiciona o cursor de mão */
+
+      &:hover {
+        color: #ffffff;  /* Branco para o efeito de hover */
+        background-color: #0056b3;  /* Azul mais escuro para o fundo do link */
+        transform: scale(1.1);  /* Efeito de zoom ao passar o mouse */
+        border-radius: 4px;  /* Arredondamento das bordas do fundo do link */
+        padding: 5px;  /* Adiciona um pouco de espaço ao redor do texto no efeito de hover */
+      }
+    }
+  }
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #003366;  /* Azul escuro para o rodapé */
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
