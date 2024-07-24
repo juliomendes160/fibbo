@@ -15,11 +15,41 @@ export class ProductListComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
+    
   }
 
-  deleteProduct(id: number) {
-    this.productService.deleteProduct(id);
-    this.products = this.productService.getProducts();
+  getProducts(): void{
+    this.productService.getProducts().subscribe({
+      next: (responseProducts) => {
+        this.products = responseProducts;
+      },
+      error: (err) => {
+        console.error('Erro ao adicionar produto', err);
+      }
+    });
+  }
+
+  updateProduct(updatedProduct: Product): void {
+    this.productService.updateProduct(updatedProduct).subscribe({
+      next: () => {
+        this.products = this.products.map(product =>
+          product.id === updatedProduct.id ? updatedProduct : product
+        );
+      },
+      error: (err) => {
+        console.error('Erro ao atualizar produto', err);
+      }
+    });
+  }
+
+  deleteProduct(id: number): void {
+    this.productService.deleteProduct(id).subscribe({
+      next: () => {
+        this.products = this.products.filter(product => product.id !== id);
+      },
+      error: (err) => {
+        console.error('Erro ao deletar produto', err);
+      }
+    });
   }
 }

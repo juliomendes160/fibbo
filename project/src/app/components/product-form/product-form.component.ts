@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-product-form',
   standalone: true,
@@ -16,8 +17,14 @@ export class ProductFormComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  addProduct() {
-    this.productService.addProduct(this.product);
-    this.product = new Product(0, '', '', 0);
+  addProduct(): void {
+    this.productService.addProduct(this.product).subscribe({
+      next: () => {
+        this.product = new Product(0, '', '', 0)
+      },
+      error: (err) => {
+        console.error('Erro ao adicionar produto', err);
+      }
+    });
   }
 }
