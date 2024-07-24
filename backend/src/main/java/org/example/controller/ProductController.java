@@ -27,8 +27,9 @@ public class ProductController {
                 .orElse(null);
     }
 
-    @PostMapping
+    @PostMapping("/product")
     public Product addProduct(@RequestBody Product product) {
+        System.out.print(product);
         product.setId(idCounter++);
         products.add(product);
         return product;
