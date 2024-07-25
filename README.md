@@ -38,9 +38,9 @@ ng serve
 
 # back-end
 
-## java
+[IntelliJ](https://www.jetbrains.com/idea/download/?section=windows)
 
-```bash
+```
 IntelliJ IDEA 2024.1.4 (Community Edition)
 Build #IC-241.18034.62, built on June 20, 2024
 Runtime version: 17.0.11+1-b1207.24 amd64
@@ -50,15 +50,21 @@ GC: G1 Young Generation, G1 Old Generation
 Memory: 2048M
 Cores: 12
 Registry:
-  ide.experimental.ui=true
+ide.experimental.ui=true
 Kotlin: 241.18034.62-IJ
+```
 
+[maven](https://maven.apache.org/download.cgi)
 
-mvn --version
+```
 Apache Maven 3.9.8 (36645f6c9b5079805ea5009217e36f2cffd34256)
 Maven home: C:\DevTools\apache-maven-3.9.8
 Java version: 21.0.3, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-21
 Default locale: pt_BR, platform encoding: UTF-8
-OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows
 ```
 
+[postman](https://www.postman.com/downloads/)
+
+```
+```

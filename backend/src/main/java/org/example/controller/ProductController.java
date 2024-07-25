@@ -27,30 +27,29 @@ public class ProductController {
                 .orElse(null);
     }
 
-    @PostMapping("/product")
+    @PostMapping
     public Product addProduct(@RequestBody Product product) {
-        System.out.print(product);
-        product.setId(idCounter++);
-        products.add(product);
+        System.out.println(product.getId());
+        System.out.println(product.getName());
+        System.out.println(product.getPrice());
+        System.out.println(product.getDescription());
         return product;
     }
 
     @PutMapping("/{id}")
     public Product updateProduct(@PathVariable Long id, @RequestBody Product product) {
-        Optional<Product> existingProduct = products.stream()
-                .filter(p -> p.getId().equals(id))
-                .findFirst();
-        if (existingProduct.isPresent()) {
-            product.setId(id);
-            products.remove(existingProduct.get());
-            products.add(product);
-            return product;
-        }
-        return null;
+        System.out.println("ID recebido na URL: " + id);
+        System.out.println("Dados do produto recebido: ");
+        System.out.println("ID do Produto: " + product.getId());
+        System.out.println("Nome do Produto: " + product.getName());
+        System.out.println("Preço do Produto: " + product.getPrice());
+        System.out.println("Descrição do Produto: " + product.getDescription());
+
+        return product;
     }
 
     @DeleteMapping("/{id}")
     public void deleteProduct(@PathVariable Long id) {
-        products.removeIf(product -> product.getId().equals(id));
+        System.out.println(id);
     }
 }
